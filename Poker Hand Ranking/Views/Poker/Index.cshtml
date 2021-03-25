@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Poker Hand Ranking Exercise";
+}
+
+<h2>Poker Hand Evaluator</h2>
+
+<p class="lead">This page was created to show a simple exercise in determining the rank of a poker hand. It was [clearly] developed using the empty ASP.NET MVC project from Visual Studio..</p>
+
+@Html.Raw(ViewBag.Message)
+
+@Html.ActionLink("Generate Another Hand", "Index", "Poker", null, new { @class = "btn btn-primary btn-lg" })
