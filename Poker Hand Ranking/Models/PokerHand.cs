@@ -298,7 +298,7 @@ namespace Poker_Hand_Ranking.Models
                 // either a Flush, Straight Flush, or Royal Flush
                 // If the difference between the highest and lowest card is five then
                 // it must be a straight                
-                if (cardSpan == 5)
+                if (cardSpan == 5 && distinctCards == 5)
                 {
                     // If the high card is an Ace then it's a Royal Flush
                     // otherwise it's just a Stright Flush
@@ -375,7 +375,7 @@ namespace Poker_Hand_Ranking.Models
             }
 
             // If the card span is 5 then it's a straight
-            if (cardSpan == 5)
+            if (cardSpan == 5 && distinctCards == 5)
             {
                 pokerHandRank = HandRanks.Straight;
                 pokerHandPrimaryCard = highCard;
