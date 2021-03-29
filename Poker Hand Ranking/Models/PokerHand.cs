@@ -297,7 +297,10 @@ namespace Poker_Hand_Ranking.Models
                 // If there are no duplicate cards then the hand is
                 // either a Flush, Straight Flush, or Royal Flush
                 // If the difference between the highest and lowest card is five then
-                // it must be a straight                
+                // it must be a straight     
+                // Technically don't need to check for 5 distinct cards
+                // because it's a flush, but it's needed below so I updated
+                // both locations
                 if (cardSpan == 5 && distinctCards == 5)
                 {
                     // If the high card is an Ace then it's a Royal Flush
@@ -374,7 +377,7 @@ namespace Poker_Hand_Ranking.Models
                 return;
             }
 
-            // If the card span is 5 then it's a straight
+            // If the card span is 5 and there are 5 unique cards then it's a straight
             if (cardSpan == 5 && distinctCards == 5)
             {
                 pokerHandRank = HandRanks.Straight;
